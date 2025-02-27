@@ -11,7 +11,11 @@ const Tab = createBottomTabNavigator();
 
 const App = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name="Tab"
         options={{ headerShown: false, animationEnabled: false }}
@@ -36,6 +40,9 @@ const App = () => (
                 shadowColor: BLACK,
                 shadowOffset: { height: 0, width: 0 },
               },
+            }}
+            screenOptions={{
+              headerShown: false,
             }}
           >
             <Tab.Screen
